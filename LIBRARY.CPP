@@ -1,3 +1,7 @@
+//c++ program using linked lists
+//author:Soumyadeep Jana
+//compiled in Borland c++
+
 #include<iostream.h>
 #include<conio.h>
 #include<stdio.h>
@@ -26,6 +30,7 @@ struct Member
 };
 
 
+//To write all the book details and member details in files during termination of the program.
 void end(Book *bstart, Member *mstart, int k)
 {
 
@@ -57,6 +62,7 @@ void end(Book *bstart, Member *mstart, int k)
 }
 
 
+//To fetch all the book records from the file and store it in a list for processing.
 Book * start_book(Book *bstart)
 {
    ifstream fin;
@@ -93,6 +99,7 @@ Book * start_book(Book *bstart)
 
 
 
+////To fetch all the members records from the file and store it in a list for processing.
 Member * start_member(Member *mstart)
 {
 
@@ -129,6 +136,8 @@ Member * start_member(Member *mstart)
 
 }
 
+
+//To add new books 
 Book * add_book(Book *bstart)
 {
        Book *btemp = new Book;
@@ -171,7 +180,7 @@ Book * add_book(Book *bstart)
 }
 
 
-
+//To add new members.
 Member * add_member(Member *mstart, int  &k)
 {
 
@@ -215,7 +224,7 @@ Member * add_member(Member *mstart, int  &k)
 }
 
 
-
+//To view the list of books.
 void view_book(Book *bstart)
 {
 
@@ -249,6 +258,7 @@ void view_book(Book *bstart)
 }
 
 
+//To view the list of members.
 void view_member(Member *mstart)
 {
 	      if(mstart == NULL)
@@ -275,7 +285,7 @@ void view_member(Member *mstart)
 	       }
 }
 
-
+//To issue book to a member.
 void issue_book(Member *mstart)
 {
 
@@ -314,6 +324,8 @@ void issue_book(Member *mstart)
 		cout<<"\t\tCard no. not matched"<<endl;
 }
 
+
+//To return book
 void return_book(Member *mstart)
 {
 
@@ -349,6 +361,7 @@ void return_book(Member *mstart)
 }
 
 
+//To modify the details of the members.
 void modify_member(Member *mstart)
 {
 
